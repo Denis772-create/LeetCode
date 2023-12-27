@@ -9,7 +9,7 @@ namespace LeetCode;
  * If a string is longer than the other, append the additional letters onto the end of the merged string.
  */
 
-internal class Solution_1768
+internal class Solution1768
 {
     public string MergeAlternately(string word1, string word2)
     {

@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace LeetCode;
+namespace LeetCode.Easy;
 
 /*
  * 1768. Merge Strings Alternately

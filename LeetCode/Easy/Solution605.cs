@@ -1,4 +1,4 @@
-﻿namespace LeetCode
+﻿namespace LeetCode.Easy
 {
     public class Solution605
     {
@@ -11,8 +11,8 @@
             {
                 if (flowerbed[i] == 0)
                 {
-                    bool emptyLeft = (i == 0) || (flowerbed[i - 1] == 0);
-                    bool emptyRight = (i == length - 1) || (flowerbed[i + 1] == 0);
+                    bool emptyLeft = i == 0 || flowerbed[i - 1] == 0;
+                    bool emptyRight = i == length - 1 || flowerbed[i + 1] == 0;
 
                     if (emptyLeft && emptyRight)
                     {

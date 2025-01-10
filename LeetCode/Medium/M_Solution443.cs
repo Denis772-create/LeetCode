@@ -1,4 +1,4 @@
-﻿namespace LeetCode;
+﻿namespace LeetCode.Medium;
 
 internal class M_Solution443
 {

@@ -1,4 +1,5 @@
 ﻿using LeetCode.Easy;
+using LeetCode.Medium;
 
 namespace LeetCode
 {
@@ -6,7 +7,7 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(new _1732().LargestAltitude([-4, -3, -2, -1, 4, 3, 2]));
+            Console.WriteLine(new _11().MaxArea([1, 1]));
         }
     }
 }

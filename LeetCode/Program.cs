@@ -1,5 +1,6 @@
 ﻿using LeetCode.Easy;
 using LeetCode.Medium;
+using LeetCode.Medium.Queues;
 
 namespace LeetCode
 {
@@ -7,6 +8,7 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
+            new Solution().PredictPartyVictory("RDD");
         }
     }
 }

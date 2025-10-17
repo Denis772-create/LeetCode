@@ -1,4 +1,4 @@
-﻿aanamespace LeetCode.Easy.LinkedList;
+﻿namespace LeetCode.Easy.LinkedList;
 
 public class ListNode
 {

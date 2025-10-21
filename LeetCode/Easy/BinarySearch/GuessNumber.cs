@@ -15,29 +15,22 @@ public class Solution(int pick) : GuessGame(pick)
 {
     public int GuessNumber(int n)
     {
-        var arr = Enumerable.Range(1, n).ToArray();
+        int left = 1;
+        int right = n;
 
-        while (arr.Length > 1)
+        while (left <= right)
         {
-            int mid = arr.Length / 2;
-            int midValue = arr[mid];
-            
-            int guessResult = guess(midValue);
-            if (guessResult == 0)
-                return midValue; // угадали 🎯
-            
-            if (guessResult == 1)
-            {
-                // pick больше → идём вправо
-                arr = arr[(mid + 1)..];
-            }
+            int mid = left + (right - left) / 2; // избегаем переполнения
+            int res = guess(mid);
+
+            if (res == 0)
+                return mid; // нашли 🎯
+            else if (res == 1)
+                left = mid + 1; // pick больше → ищем справа
             else
-            {
-                // pick меньше → идём влево
-                arr = arr[..mid];
-            }
+                right = mid - 1; // pick меньше → ищем слева
         }
         
-        return arr[0];
+        return -1; // теоретически не должно сюда дойти
     }
 }

@@ -14,7 +14,7 @@ public class Lc0136SingleNumber
 {
     public int SingleNumber(int[] nums)
     {
-        int result = 0;
+        var result = 0;
         foreach (var num in nums)
             result ^= num;
         return result;

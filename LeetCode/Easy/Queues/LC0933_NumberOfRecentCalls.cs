@@ -16,10 +16,17 @@ public class Lc0933NumberOfRecentCalls
 
     public int Ping(int t)
     {
+        // 1️⃣ Добавляем текущее время вызова
         _queue.Enqueue(t);
+
+        // 2️⃣ Удаляем все вызовы, которые старше 3000 мс
         int left = t - 3000;
         while (_queue.Count > 0 && _queue.Peek() < left)
+        {
             _queue.Dequeue();
+        }
+
+        // 3️⃣ Количество оставшихся вызовов — ответ
         return _queue.Count;
     }
 }

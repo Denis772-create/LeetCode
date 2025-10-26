@@ -4,15 +4,15 @@ public class Trie
 {
     private class Node
     {
-        public Node[] Next = new Node[26]; // дети по буквам a..z
+        public readonly Node[] Next = new Node[26]; // дети по буквам a..z
         public bool IsWord;                 // флажок: здесь заканчивается слово
     }
     
-    private readonly Node root = new Node();
+    private readonly Node _root = new Node();
 
     public void Insert(string word)
     {
-        var cur = root;
+        var cur = _root;
         foreach (var ch in word)
         {
             var i = ch - 'a';  // номер буквы (0..25)
@@ -40,7 +40,7 @@ public class Trie
     // Вспомогательная проходка по буквам, возвращает узел, где остановились (или null)
     private Node Walk(string s)
     {
-        var cur = root;
+        var cur = _root;
         foreach (var ch in s)
         {
             int i = ch - 'a';

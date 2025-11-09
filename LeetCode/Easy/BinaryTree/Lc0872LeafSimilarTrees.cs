@@ -45,7 +45,7 @@ public class Lc0872LeafSimilarTrees
         if (a.Count != b.Count) 
             return false;
 
-        for (int i = 0; i < a.Count; i++)
+        for (var i = 0; i < a.Count; i++)
         {
             if (a[i] != b[i]) 
                 return false;

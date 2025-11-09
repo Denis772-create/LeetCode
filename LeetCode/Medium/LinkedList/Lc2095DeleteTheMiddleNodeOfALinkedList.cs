@@ -51,8 +51,8 @@ public class Lc2095DeleteTheMiddleNodeOfALinkedList
         if (head?.next == null)
             return null;
 
-        ListNode? slow = head;  // идёт по одному шагу
-        ListNode? fast = head;  // идёт по два шага
+        var slow = head;  // идёт по одному шагу
+        var fast = head;  // идёт по два шага
         ListNode? prev = null;  // элемент перед slow
 
         // 2️⃣ Ищем середину

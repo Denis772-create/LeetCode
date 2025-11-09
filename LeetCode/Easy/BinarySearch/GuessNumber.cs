@@ -46,16 +46,16 @@ public class Lc0374GuessNumberHigherOrLower : GuessGame
 
     public int GuessNumber(int n)
     {
-        int left = 1;
-        int right = n;
+        var left = 1;
+        var right = n;
 
         while (left <= right)
         {
             // 1️⃣ Избегаем переполнения при вычислении середины
-            int mid = left + (right - left) / 2;
+            var mid = left + (right - left) / 2;
 
             // 2️⃣ Проверяем результат
-            int res = guess(mid);
+            var res = guess(mid);
 
             if (res == 0)
                 return mid;           // 🎯 нашли загаданное число

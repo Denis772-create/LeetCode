@@ -46,7 +46,7 @@ public class Lc1657DetermineIfTwoStringsAreClose
         if (freq1.Count != freq2.Count) 
             return false;
 
-        for (int i = 0; i < freq1.Count; i++)
+        for (var i = 0; i < freq1.Count; i++)
         {
             if (freq1[i] != freq2[i])
                 return false;

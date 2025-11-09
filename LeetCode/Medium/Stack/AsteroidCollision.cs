@@ -8,15 +8,15 @@ public class SolutionAsteroidCollision
 
         foreach (var a in asteroids)
         {
-            int curr = a;
-            bool alive = true;
+            var curr = a;
+            var alive = true;
 
             // Столкновения только при "вправо" (в стеке сверху) и "влево" (текущий)
             while (alive && st.Count > 0 && st.Peek() > 0 && curr < 0)
             {
-                int top = st.Peek();
-                int at = Math.Abs(top);
-                int ac = Math.Abs(curr);
+                var top = st.Peek();
+                var at = Math.Abs(top);
+                var ac = Math.Abs(curr);
 
                 if (at < ac)
                 {

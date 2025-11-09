@@ -31,17 +31,17 @@ public class Solution
 {
     public int[] DailyTemperatures(int[] temperatures)
     {
-        int n = temperatures.Length;
+        var n = temperatures.Length;
         var ans = new int[n];
         var st = new Stack<int>(); // храним индексы дней
 
-        for (int i = 0; i < n; i++)
+        for (var i = 0; i < n; i++)
         {
             // Пока текущая температура выше, чем у предыдущего дня —
             // обновляем ответ для этого предыдущего дня
             while (st.Count > 0 && temperatures[i] > temperatures[st.Peek()])
             {
-                int prev = st.Pop();
+                var prev = st.Pop();
                 ans[prev] = i - prev; // сколько дней ждать потепления
             }
 

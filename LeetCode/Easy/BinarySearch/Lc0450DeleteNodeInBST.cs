@@ -63,7 +63,7 @@ public class Lc0450DeleteNodeInBST
                 return root.left;
 
             // Случай 3: два ребёнка
-            TreeNode minNode = FindMin(root.right);
+            var minNode = FindMin(root.right);
             root.val = minNode.val; // копируем значение
             root.right = DeleteNode(root.right, minNode.val); // удаляем дубликат
         }

@@ -53,9 +53,9 @@ public class Lc0199BinaryTreeRightSideView
         // 1️⃣ Обходим уровни
         while (queue.Count > 0)
         {
-            int levelSize = queue.Count;
+            var levelSize = queue.Count;
 
-            for (int i = 0; i < levelSize; i++)
+            for (var i = 0; i < levelSize; i++)
             {
                 var node = queue.Dequeue();
 

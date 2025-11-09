@@ -16,9 +16,9 @@ public class Lc0643MaximumAverageSubarrayI
     public double FindMaxAverage(int[] nums, int k)
     {
         double windowSum = 0;
-        for (int i = 0; i < k; i++) windowSum += nums[i];
-        double maxSum = windowSum;
-        for (int i = k; i < nums.Length; i++)
+        for (var i = 0; i < k; i++) windowSum += nums[i];
+        var maxSum = windowSum;
+        for (var i = k; i < nums.Length; i++)
         {
             windowSum += nums[i] - nums[i - k];
             if (windowSum > maxSum) maxSum = windowSum;

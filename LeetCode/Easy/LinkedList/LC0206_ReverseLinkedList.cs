@@ -39,7 +39,7 @@ public class Lc0206ReverseLinkedList
     public ListNode? ReverseList(ListNode? head)
     {
         ListNode? prev = null;  // предыдущий узел (изначально null)
-        ListNode? curr = head;  // текущий узел, с которого начинаем
+        var curr = head;  // текущий узел, с которого начинаем
 
         while (curr != null)
         {

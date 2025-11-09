@@ -16,9 +16,9 @@ public class Lc1456MaximumNumberOfVowelsInSubstringOfGivenLength
     {
         bool IsVowel(char c) => c is 'a' or 'e' or 'i' or 'o' or 'u';
         int current = 0, best = 0;
-        for (int i = 0; i < k; i++) if (IsVowel(s[i])) current++;
+        for (var i = 0; i < k; i++) if (IsVowel(s[i])) current++;
         best = current;
-        for (int i = k; i < s.Length; i++)
+        for (var i = k; i < s.Length; i++)
         {
             if (IsVowel(s[i - k])) current--;
             if (IsVowel(s[i])) current++;

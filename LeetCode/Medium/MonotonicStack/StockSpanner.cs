@@ -8,7 +8,7 @@ public class StockSpanner
     
     public int Next(int price)
     {
-        int span = 1;
+        var span = 1;
         
         (int Price, int Days) current = (price, 1);
         

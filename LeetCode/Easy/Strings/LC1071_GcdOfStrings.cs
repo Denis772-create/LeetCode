@@ -38,7 +38,7 @@ public class Lc1071GcdOfStrings
         
         // Находим наибольший общий делитель длин строк
         // Например, len("ABCABC") = 6, len("ABC") = 3 → gcd(6,3) = 3
-        int k = Gcd(str1.Length, str2.Length);
+        var k = Gcd(str1.Length, str2.Length);
         
         // Возвращаем префикс длиной k — это и есть повторяющаяся основа
         // В примере выше: str1.Substring(0, 3) = "ABC"

@@ -7,10 +7,10 @@ public class Solution
     public int NearestExit(char[][] maze, int[] entrance)
     {
         // m — число строк (высота лабиринта)
-        int m = maze.Length;
+        var m = maze.Length;
 
         // n — число столбцов (ширина лабиринта)
-        int n = maze[0].Length;
+        var n = maze[0].Length;
 
         // dirs — 4 возможных направления движения:
         // вверх (-1,0), вниз (1,0), влево (0,-1), вправо (0,1)s
@@ -50,8 +50,8 @@ public class Solution
             foreach (var d in dirs)
             {
                 // Вычисляем координаты соседней клетки.
-                int nr = r + d[0];
-                int nc = c + d[1];
+                var nr = r + d[0];
+                var nc = c + d[1];
 
                 // Проверяем три условия:
                 // 1) Сосед внутри границ лабиринта.

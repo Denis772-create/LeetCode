@@ -9,8 +9,8 @@ public class Solution
         Array.Sort(intervals, (a, b) => a[1].CompareTo(b[1]));
         
         // 2) жадно набираем максимум непересекающихся интервалов
-        int taken = 0;
-        int lastEnd = int.MinValue;
+        var taken = 0;
+        var lastEnd = int.MinValue;
 
         foreach (var it in intervals)
         {

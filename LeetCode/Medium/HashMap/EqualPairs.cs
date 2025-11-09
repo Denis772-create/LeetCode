@@ -34,32 +34,32 @@ public class Solution
 {
     public int EqualPairs(int[][] grid)
     {
-        int n = grid.Length;
+        var n = grid.Length;
         var rowMap = new Dictionary<string, int>();
 
         // 1️⃣ Сохраняем все строки в словарь
-        for (int i = 0; i < n; i++)
+        for (var i = 0; i < n; i++)
         {
-            string rowKey = string.Join(",", grid[i]);
-            if (rowMap.TryGetValue(rowKey, out int count))
+            var rowKey = string.Join(",", grid[i]);
+            if (rowMap.TryGetValue(rowKey, out var count))
                 rowMap[rowKey] = count + 1;
             else
                 rowMap[rowKey] = 1;
         }
 
-        int result = 0;
+        var result = 0;
 
         // 2️⃣ Проверяем каждый столбец
-        for (int j = 0; j < n; j++)
+        for (var j = 0; j < n; j++)
         {
             var col = new int[n];
-            for (int i = 0; i < n; i++)
+            for (var i = 0; i < n; i++)
                 col[i] = grid[i][j];
 
-            string colKey = string.Join(",", col);
+            var colKey = string.Join(",", col);
 
             // 3️⃣ Если столбец совпадает со строкой — добавляем количество
-            if (rowMap.TryGetValue(colKey, out int count))
+            if (rowMap.TryGetValue(colKey, out var count))
                 result += count;
         }
 

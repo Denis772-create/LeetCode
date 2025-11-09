@@ -48,7 +48,7 @@ public class Trie
         var cur = _root;
         foreach (var ch in word)
         {
-            int i = ch - 'a'; // индекс буквы (0..25)
+            var i = ch - 'a'; // индекс буквы (0..25)
             if (cur.Next[i] == null)
                 cur.Next[i] = new Node();
 
@@ -85,7 +85,7 @@ public class Trie
         var cur = _root;
         foreach (var ch in s)
         {
-            int i = ch - 'a';
+            var i = ch - 'a';
             cur = cur.Next[i];
             if (cur == null)
                 return null;

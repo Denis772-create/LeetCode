@@ -24,22 +24,23 @@ public class Lc0283MoveZeroes
 {
     public void MoveZeroes(int[] nums)
     {
-        var pointer = 0; // позиция, куда ставить следующий ненулевой элемент
-
-        for (var i = 0; i < nums.Length; i++)
+        int insertPos = 0;
+        
+        // Сначала переносим все НЕ нули в начало массива
+        for (int i = 0; i < nums.Length; i++)
         {
             if (nums[i] != 0)
             {
-                // Если указатели разные — двигаем элемент вперёд
-                if (i != pointer)
-                {
-                    nums[pointer] = nums[i];
-                    nums[i] = 0; // ставим 0 на старое место
-                }
-
-                // Сдвигаем pointer вперёд — следующая позиция для ненуля
-                pointer++;
+                nums[insertPos] = nums[i];
+                insertPos++;
             }
+        }
+        
+        // Остальное заполняем нулями
+        while (insertPos < nums.Length)
+        {
+            nums[insertPos] = 0;
+            insertPos++;
         }
     }
 }

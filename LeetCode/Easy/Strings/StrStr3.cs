@@ -14,7 +14,7 @@ public class StrStr3
         
         // Проходим по haystack
         // i — это позиция, откуда мы пробуем начать сравнение
-        for (int i = 0; i < haystack.Length - needle.Length; i++)
+        for (int i = 0; i <= haystack.Length - needle.Length; i++)
         {
             // Считаем, что совпадение есть, пока не доказано обратное
             bool match = true;
